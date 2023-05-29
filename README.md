@@ -13,9 +13,13 @@ Below is an application in which some of the related problems are solved. Short 
 The app is a 3x5 grid view. The first three lines are text items, the fourth and fifth lines are buttons. Relevant widgets: **TextTileWidget**, **IconTileWidget** and **IconTilePlusWidget**. Each such widget corresponds to three _BLoCs_: **SelectionBloc**, **ButtonBloc** and **ButtonPlusBloc**.
 
 - The logic of **SelectionBloc** is described by the state machine selection state machine:
->>>>>
+
+![selection_state_machine](https://github.com/mk590901/bloc_dependencies/assets/125393245/3b0421da-0afc-42aa-a621-c315e2d9afbd)
+
 - The state machine button state machine is built into **ButtonBloc** and **ButtonPlusBloc**:
->>>>>
+
+![button_state_machine](https://github.com/mk590901/bloc_dependencies/assets/125393245/e061f6df-1201-41a3-876e-d5aa3b6a991b)
+
 
 ## Example A
 The **_first 9 elements_** in the grid view are text widgets. The widget constructor contains an identifier - an integer and a list of identifiers of widgets in which the background should be changed when widget is clicked. For example constructor:
