@@ -45,3 +45,10 @@ The implemented transition mechanism of state machines ensures the transfer of p
 The fourth line of grid view is the three **_PLAY/STOP_** buttons detailed in the **_bloc_button_** project. Widget is **_IconTileWidget_**, BLoC is **_ButtonBloc_**. Widget is used as is and simply illustrates the broadcast property of BLoC. You press any button, the general state machine changes its state and all buttons go from the **stop** state to the **play** state and back.
 ## Example C
 Demonstrates the independent operation of 3 buttons. I.e. each of them can change its state regardless of the state of the other button, despite the fact that **BLoC** has the same state for all. Each widget has its own **uuid** and can firstly check the source of event that is sent by **_touch up_**, secondly the currentState variable, and thirdly, it can change the **BLoC** state in relation to **_currentState_** before sending the of _event_. I.e. each button acts according to its own logic as if each button has its **_independent state machine_**.
+## Video
+
+https://github.com/mk590901/bloc_dependencies/assets/125393245/eee26fba-6243-450b-9fc3-a62c32c53b01
+
+
+
+
