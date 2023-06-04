@@ -5,6 +5,7 @@ import 'blocs/selection_bloc.dart';
 import 'events/bundle.dart';
 import 'events/selection_events.dart';
 import 'states/selection_state.dart';
+import 'SizeConfig.dart';
 
 class TextTileWidget extends StatelessWidget {
   const TextTileWidget({
@@ -24,6 +25,7 @@ class TextTileWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return Scaffold(
       backgroundColor: Colors.deepPurple,
       body: Listener(
@@ -66,18 +68,18 @@ class TextTileWidget extends StatelessWidget {
                   Text(
                     '$textInside $id',
                     style: TextStyle(
-                      fontSize: 20,
+                      fontSize: h_(6),
                       color: textColor, // set text color to blue
                     ),
                     textAlign: TextAlign.center,
                   ),
-                  const SizedBox(
-                    height: 20,
+                  SizedBox(
+                    height: h_(4),
                   ),
                   Text(
                     '$iDs',
                     style: TextStyle(
-                      fontSize: 16,
+                      fontSize: h_(3),
                       color: textColor, // set text color to blue
                     ),
                     textAlign: TextAlign.right,

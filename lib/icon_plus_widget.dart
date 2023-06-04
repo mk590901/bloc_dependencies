@@ -5,6 +5,7 @@ import 'package:uuid/uuid.dart';
 import 'blocs/button_plus_bloc.dart';
 import 'events/button_events.dart';
 import 'states/button_state.dart';
+import 'SizeConfig.dart';
 
 class IconPlusTileWidget extends StatelessWidget {
   IconPlusTileWidget({
@@ -21,6 +22,7 @@ class IconPlusTileWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return Scaffold(
       backgroundColor: Colors.deepPurple,
       body: Listener(
@@ -59,7 +61,7 @@ class IconPlusTileWidget extends StatelessWidget {
                   currentState.state().name == 'stop'
                       ? Icons.play_arrow_sharp
                       : Icons.pause_sharp,
-                  size: 40,
+                  size: h_(12),
                   color: iconColor),
             ),
           );

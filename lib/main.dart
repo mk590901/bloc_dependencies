@@ -47,6 +47,7 @@ class DependenciesPage extends StatelessWidget {
       body: Center(
         child: GridView.count(
           crossAxisCount: 3, // Number of columns
+          childAspectRatio: 1.2,
           children: [
             const TextTileWidget(
                 id: 1,
